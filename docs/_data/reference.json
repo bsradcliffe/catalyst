@@ -1,0 +1,1832 @@
+{
+	"id": 0,
+	"name": "@github/catalyst",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 6,
+			"name": "\"src/attr\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/attr.ts",
+			"children": [
+				{
+					"id": 8,
+					"name": "attrValue",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/attr.ts",
+							"line": 4,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "number"
+							},
+							{
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						]
+					}
+				},
+				{
+					"id": 7,
+					"name": "attrs",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/attr.ts",
+							"line": 3,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "intrinsic",
+												"name": "symbol"
+											}
+										]
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Record"
+							},
+							{
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						],
+						"name": "WeakMap"
+					},
+					"defaultValue": "new WeakMap<Record<PropertyKey, unknown>, string[]>()"
+				},
+				{
+					"id": 9,
+					"name": "attr",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 10,
+							"name": "attr",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Attr is a decorator which tags a property as one to be initialized via\n`initializeAttrs`.",
+								"text": "The signature is typed such that the property must be one of a String,\nNumber or Boolean. This matches the behavior of `initializeAttrs`.\n"
+							},
+							"typeParameter": [
+								{
+									"id": 11,
+									"name": "K",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 12,
+									"name": "proto",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "K",
+												"constraint": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											{
+												"type": "reference",
+												"id": 8,
+												"name": "attrValue"
+											}
+										],
+										"name": "Record"
+									}
+								},
+								{
+									"id": 13,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "typeParameter",
+										"name": "K",
+										"constraint": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/attr.ts",
+							"line": 13,
+							"character": 20
+						}
+					]
+				},
+				{
+					"id": 18,
+					"name": "attrToAttributeName",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 19,
+							"name": "attrToAttributeName",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 20,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/attr.ts",
+							"line": 76,
+							"character": 28
+						}
+					]
+				},
+				{
+					"id": 21,
+					"name": "defineObservedAttributes",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 22,
+							"name": "defineObservedAttributes",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 23,
+									"name": "classObject",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "CustomElement"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/attr.ts",
+							"line": 80,
+							"character": 40
+						}
+					]
+				},
+				{
+					"id": 14,
+					"name": "initializeAttrs",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 15,
+							"name": "initializeAttrs",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "initializeAttrs is called with a set of class property names (if omitted, it\nwill look for any properties tagged with the `@attr` decorator). With this\nlist it defines property descriptors for each property that map to `data-*`\nattributes on the HTMLElement instance.",
+								"text": "It works around Native Class Property semantics - which are equivalent to\ncalling `Object.defineProperty` on the instance upon creation, but before\n`constructor()` is called.\n\nIf a class property is assigned to the class body, it will infer the type\n(using `typeof`) and define an appropriate getter/setter combo that aligns\nto that type. This means class properties assigned to Numbers can only ever\nbe Numbers, assigned to Booleans can only ever be Booleans, and assigned to\nStrings can only ever be Strings.\n\nThis is automatically called as part of `@controller`. If a class uses the\n`@controller` decorator it should not call this manually.\n"
+							},
+							"parameters": [
+								{
+									"id": 16,
+									"name": "instance",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "HTMLElement"
+									}
+								},
+								{
+									"id": 17,
+									"name": "names",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Iterable"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/attr.ts",
+							"line": 37,
+							"character": 31
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						8
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						7
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						9,
+						18,
+						21,
+						14
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/attr.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 24,
+			"name": "\"src/auto-shadow-root\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/auto-shadow-root.ts",
+			"children": [
+				{
+					"id": 25,
+					"name": "autoShadowRoot",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 26,
+							"name": "autoShadowRoot",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 27,
+									"name": "element",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "HTMLElement"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/auto-shadow-root.ts",
+							"line": 1,
+							"character": 30
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						25
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/auto-shadow-root.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 28,
+			"name": "\"src/bind\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/bind.ts",
+			"children": [
+				{
+					"id": 29,
+					"name": "Subscription",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 30,
+							"name": "closed",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/bind.ts",
+									"line": 57,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 31,
+							"name": "unsubscribe",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 32,
+									"name": "unsubscribe",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "src/bind.ts",
+									"line": 58,
+									"character": 13
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								30
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								31
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 56,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 47,
+					"name": "Binding",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 92,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 48,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 51,
+									"name": "method",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "src/bind.ts",
+											"line": 92,
+											"character": 49
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 50,
+									"name": "tag",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "src/bind.ts",
+											"line": 92,
+											"character": 33
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 49,
+									"name": "type",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "src/bind.ts",
+											"line": 92,
+											"character": 20
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Variables",
+									"kind": 32,
+									"children": [
+										51,
+										50,
+										49
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "src/bind.ts",
+									"line": 92,
+									"character": 14
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 33,
+					"name": "controllers",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 1,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Element"
+							}
+						],
+						"name": "WeakSet"
+					},
+					"defaultValue": "new WeakSet<Element>()"
+				},
+				{
+					"id": 37,
+					"name": "observers",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 17,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "Node"
+							},
+							{
+								"type": "reference",
+								"id": 29,
+								"name": "Subscription"
+							}
+						],
+						"name": "WeakMap"
+					},
+					"defaultValue": "new WeakMap<Node, Subscription>()"
+				},
+				{
+					"id": 34,
+					"name": "bind",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 35,
+							"name": "bind",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 36,
+									"name": "controller",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "HTMLElement"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 7,
+							"character": 20
+						}
+					]
+				},
+				{
+					"id": 55,
+					"name": "bindActions",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 56,
+							"name": "bindActions",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 57,
+									"name": "el",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Element"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 105,
+							"character": 20
+						}
+					]
+				},
+				{
+					"id": 41,
+					"name": "bindElements",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 42,
+							"name": "bindElements",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 43,
+									"name": "root",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"name": "Element"
+											},
+											{
+												"type": "reference",
+												"name": "ShadowRoot"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 61,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 52,
+					"name": "bindings",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 53,
+							"name": "bindings",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 54,
+									"name": "el",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Element"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 47,
+										"name": "Binding"
+									}
+								],
+								"name": "Iterable"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 93,
+							"character": 18
+						}
+					]
+				},
+				{
+					"id": 44,
+					"name": "handleEvent",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 45,
+							"name": "handleEvent",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 46,
+									"name": "event",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Event"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 72,
+							"character": 20
+						}
+					]
+				},
+				{
+					"id": 38,
+					"name": "listenForBind",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 39,
+							"name": "listenForBind",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Set up observer that will make sure any actions that are dynamically\ninjected into `el` will be bound to it's controller.",
+								"text": "This returns a Subscription object which you can call `unsubscribe()` on to\nstop further live updates.\n"
+							},
+							"parameters": [
+								{
+									"id": 40,
+									"name": "el",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "Node"
+									},
+									"defaultValue": "document"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 29,
+								"name": "Subscription"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/bind.ts",
+							"line": 25,
+							"character": 29
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						29
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						47
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						33,
+						37
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						34,
+						55,
+						41,
+						52,
+						44,
+						38
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/bind.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 62,
+			"name": "\"src/controller\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/controller.ts",
+			"children": [
+				{
+					"id": 63,
+					"name": "controller",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 64,
+							"name": "controller",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Controller is a decorator to be used over a class that extends HTMLElement.\nIt will automatically `register()` the component in the customElement\nregistry, as well as ensuring `bind(this)` is called on `connectedCallback`,\nwrapping the classes `connectedCallback` method if needed."
+							},
+							"parameters": [
+								{
+									"id": 65,
+									"name": "classObject",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "CustomElement"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/controller.ts",
+							"line": 13,
+							"character": 26
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						63
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/controller.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "\"src/custom-element\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/custom-element.ts",
+			"children": [
+				{
+					"id": 2,
+					"name": "CustomElement",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 3,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 4,
+									"name": "new CustomElement",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "HTMLElement"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "src/custom-element.ts",
+									"line": 1,
+									"character": 32
+								}
+							]
+						},
+						{
+							"id": 5,
+							"name": "observedAttributes",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/custom-element.ts",
+									"line": 3,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								3
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								5
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/custom-element.ts",
+							"line": 1,
+							"character": 30
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/custom-element.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 66,
+			"name": "\"src/findtarget\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/findtarget.ts",
+			"children": [
+				{
+					"id": 67,
+					"name": "findTarget",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 68,
+							"name": "findTarget",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "findTarget will run `querySelectorAll` against the given controller, plus\nits shadowRoot, returning any the first child that:",
+								"text": " - Matches the selector of `[data-target~=\"tag.name\"]` where tag is the\n tagName of the given HTMLElement, and `name` is the given `name` argument.\n\n - Closest ascendant of the element, that matches the tagname of the\n controller, is the specific instance of the controller itself - in other\n words it is not nested in other controllers of the same type.\n\n"
+							},
+							"parameters": [
+								{
+									"id": 69,
+									"name": "controller",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "HTMLElement"
+									}
+								},
+								{
+									"id": 70,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"name": "Element"
+									},
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/findtarget.ts",
+							"line": 13,
+							"character": 26
+						}
+					]
+				},
+				{
+					"id": 71,
+					"name": "findTargets",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 72,
+							"name": "findTargets",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 73,
+									"name": "controller",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "HTMLElement"
+									}
+								},
+								{
+									"id": 74,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "Element"
+								}
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/findtarget.ts",
+							"line": 25,
+							"character": 27
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						67,
+						71
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/findtarget.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 86,
+			"name": "\"src/index\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/index.ts",
+			"children": [
+				{
+					"id": 95,
+					"name": "attr",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 9
+				},
+				{
+					"id": 87,
+					"name": "bind",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 34
+				},
+				{
+					"id": 94,
+					"name": "controller",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 63
+				},
+				{
+					"id": 90,
+					"name": "findTarget",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 67
+				},
+				{
+					"id": 91,
+					"name": "findTargets",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 71
+				},
+				{
+					"id": 88,
+					"name": "listenForBind",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 38
+				},
+				{
+					"id": 89,
+					"name": "register",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 59
+				},
+				{
+					"id": 92,
+					"name": "target",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 76
+				},
+				{
+					"id": 93,
+					"name": "targets",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 81
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						95,
+						87,
+						94,
+						90,
+						91,
+						88,
+						89,
+						92,
+						93
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 58,
+			"name": "\"src/register\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/register.ts",
+			"children": [
+				{
+					"id": 59,
+					"name": "register",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 60,
+							"name": "register",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Register the controller as a custom element.",
+								"text": "The classname is converted to a approriate tag name.\n\nExample: HelloController => hello-controller\n"
+							},
+							"parameters": [
+								{
+									"id": 61,
+									"name": "classObject",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "CustomElement"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/register.ts",
+							"line": 10,
+							"character": 24
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						59
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/register.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 75,
+			"name": "\"src/target\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/catalyst/catalyst/src/target.ts",
+			"children": [
+				{
+					"id": 76,
+					"name": "target",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 77,
+							"name": "target",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Target is a decorator which - when assigned to a property field on the\nclass - will override that class field, turning it into a Getter which\nreturns a call to `findTarget(this, key)` where `key` is the name of the\nproperty field. In other words, `@target foo` becomes a getter for\n`findTarget(this, 'foo')`."
+							},
+							"typeParameter": [
+								{
+									"id": 78,
+									"name": "K",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 79,
+									"name": "proto",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "K",
+												"constraint": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											{
+												"type": "intrinsic",
+												"name": "unknown"
+											}
+										],
+										"name": "Record"
+									}
+								},
+								{
+									"id": 80,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "typeParameter",
+										"name": "K",
+										"constraint": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/target.ts",
+							"line": 10,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 81,
+					"name": "targets",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 82,
+							"name": "targets",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Targets is a decorator which - when assigned to a property field on the\nclass - will override that class field, turning it into a Getter which\nreturns a call to `findTargets(this, key)` where `key` is the name of the\nproperty field. In other words, `@targets foo` becomes a getter for\n`findTargets(this, 'foo')`."
+							},
+							"typeParameter": [
+								{
+									"id": 83,
+									"name": "K",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 84,
+									"name": "proto",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "K",
+												"constraint": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											},
+											{
+												"type": "intrinsic",
+												"name": "unknown"
+											}
+										],
+										"name": "Record"
+									}
+								},
+								{
+									"id": 85,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "typeParameter",
+										"name": "K",
+										"constraint": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/target.ts",
+							"line": 26,
+							"character": 23
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						76,
+						81
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/target.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				6,
+				24,
+				28,
+				62,
+				1,
+				66,
+				86,
+				58,
+				75
+			]
+		}
+	]
+}
